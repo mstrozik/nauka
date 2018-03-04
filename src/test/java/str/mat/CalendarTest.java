@@ -13,7 +13,7 @@ public class CalendarTest {
 
     @Test
     public void iteratorTest(){
-        Iterator<LocalDate> it = getIterator(19, 30);
+        Iterator<LocalDate> it = getIterator(19);
 
         assertEquals(it.next(), getLocalDate(20));
         assertEquals(it.next(), getLocalDate(23));
@@ -48,6 +48,12 @@ public class CalendarTest {
     public void noSuchElementTest(){
         Iterator<LocalDate> it = getIterator(19, 19);
         it.next();
+    }
+
+    private Iterator<LocalDate> getIterator(int fromDayOfMonth){
+        Calendar calendar = new Calendar(getLocalDate(fromDayOfMonth));
+
+        return calendar.iterator();
     }
 
     private Iterator<LocalDate> getIterator(int fromDayOfMonth, int toDayOfMonth){
