@@ -3,9 +3,10 @@ package str.mat;
 import org.testng.annotations.Test;
 import java.time.LocalDate;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 import str.mat.model.Calendar;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
 
 public class CalendarTest {
@@ -41,6 +42,12 @@ public class CalendarTest {
         assertEquals(it.next(), getLocalDate(20));
         assertEquals(it.next(), getLocalDate(23));
         assertFalse(it.hasNext());
+    }
+
+    @Test(expectedExceptions = NoSuchElementException.class)
+    public void noSuchElementTest(){
+        Iterator<LocalDate> it = getIterator(19, 19);
+        it.next();
     }
 
     private Iterator<LocalDate> getIterator(int fromDayOfMonth, int toDayOfMonth){
