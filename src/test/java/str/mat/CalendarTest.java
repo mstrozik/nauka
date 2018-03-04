@@ -52,15 +52,11 @@ public class CalendarTest {
 
     private Iterator<LocalDate> getIterator(int fromDayOfMonth){
         Calendar calendar = new Calendar(getLocalDate(fromDayOfMonth));
-
         return calendar.iterator();
     }
 
     private Iterator<LocalDate> getIterator(int fromDayOfMonth, int toDayOfMonth){
-        LocalDate startLocalDate = LocalDate.of(2016, 9, fromDayOfMonth);
-        LocalDate endLocalDate = LocalDate.of(2016, 9, toDayOfMonth);
-        Calendar calendar = new Calendar(startLocalDate, endLocalDate);
-
+        Calendar calendar = new Calendar(getLocalDate(fromDayOfMonth), getLocalDate(toDayOfMonth));
         return calendar.iterator();
     }
 
