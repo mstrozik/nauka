@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [str.mat.CalendarTest]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
+    <classes>
+      <class name="str.mat.CalendarTest">
+        <methods>
+          <include name="setup"/>
+          <include name="calendarIteratorTest"/>
+        </methods>
+      </class> <!-- str.mat.CalendarTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [str.mat.CalendarTest] -->
