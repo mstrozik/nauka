@@ -41,7 +41,7 @@ public class Calendar implements Iterable<LocalDate> {
 
     private LocalDate getNextDay(){
         LocalDate nextDate = (lastReturnedDate != null) ? lastReturnedDate.plusDays(NEXT_DAY) : startDate;
-        while (!(DAYS.contains(nextDate.getDayOfWeek()))){
+        while (!DAYS.contains(nextDate.getDayOfWeek())){
             nextDate = nextDate.plusDays(NEXT_DAY);
         }
         return nextDate;
