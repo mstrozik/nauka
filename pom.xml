@@ -19,9 +19,6 @@
   </build>
   <packaging>jar</packaging>
 
-  <name>calendarx</name>
-  <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -32,11 +29,6 @@
         <artifactId>testng</artifactId>
         <version>6.14.2</version>
         <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>23.0</version>
       </dependency>
   </dependencies>
 </project>

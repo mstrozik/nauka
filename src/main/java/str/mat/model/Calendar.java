@@ -1,11 +1,8 @@
 package str.mat.model;
 
-import com.google.common.collect.Lists;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class Calendar implements Iterable<LocalDate> {
 
@@ -13,7 +10,7 @@ public class Calendar implements Iterable<LocalDate> {
     private LocalDate lastReturnedDate;
 
     private static final int NEXT_DAY = 1;
-    private static final List<DayOfWeek> DAYS = Lists.newArrayList(DayOfWeek.TUESDAY, DayOfWeek.FRIDAY);
+    private static final List<DayOfWeek> DAYS = Arrays.asList(DayOfWeek.TUESDAY, DayOfWeek.FRIDAY);
 
     public Calendar(LocalDate startDate){
         this.startDate = startDate;
