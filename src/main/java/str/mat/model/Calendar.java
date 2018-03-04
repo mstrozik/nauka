@@ -1,5 +1,6 @@
 package str.mat.model;
 
+import lombok.NonNull;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.*;
@@ -12,12 +13,12 @@ public class Calendar implements Iterable<LocalDate> {
     private static final int NEXT_DAY = 1;
     private static final List<DayOfWeek> DAYS = Arrays.asList(DayOfWeek.TUESDAY, DayOfWeek.FRIDAY);
 
-    public Calendar(LocalDate startDate){
+    public Calendar(@NonNull LocalDate startDate){
         this.startDate = startDate;
         this.endDate = LocalDate.now();
     }
 
-    public Calendar(LocalDate startDate, LocalDate endDate){
+    public Calendar(@NonNull LocalDate startDate, @NonNull LocalDate endDate){
         this.startDate = startDate;
         this.endDate = endDate;
     }
